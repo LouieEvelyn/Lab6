@@ -7,10 +7,10 @@ app.use(express.urlencoded({ extended: false })); // to support URL-encoded bodi
 var books = []; // Array to store book inventory
 
 app.get('/', function(req, res) {
-    res.redirect('/books/list');
+    res.redirect('http://localhost:3000/books/list');
 });
 
-app.get('/bookinventory/list', function(req, res) {
+app.get('http://localhost:3000/bookinventory/list', function(req, res) {
     
    var html = '<p>';
    for (var i = 0; i < books.length; i++) {
@@ -24,7 +24,7 @@ app.get('/bookinventory/list', function(req, res) {
 
    res.send('List of books: ' + html + '<br><a href="/books/add">Add a new book</a> ');
 });
-app.get('/bookinventory/add', function(req, res) {
+app.get('http://localhost:3000/bookinventory/add', function(req, res) {
     var html = '<br><form action="/books/addbook" method="post">';
   html += '<label for="title">Title:</label><br><input type="text" id="title" name="title"><br>';
   html += '<label for="author">Author:</label><br><input type="text" id="author" name="author"><br>';
@@ -36,7 +36,7 @@ app.get('/bookinventory/add', function(req, res) {
   res.send('Insert book details: ' + html + '<br><a href="/books/list">List of books</a>');
 });
 
-app.post('/bookinventory/addbook', function(req, res) {
+app.post('http://localhost:3000/bookinventory/addbook', function(req, res) {
     console.log(req.body);
     var newBook = {
         title: req.body.title,
