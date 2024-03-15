@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false })); // to support URL-encoded bodi
 var books = []; // Array to store book inventory
 
 app.get('/', function(req, res) {
-    res.redirect('/books/list');
+    res.redirect('/bookinventory/list');
 });
 
 app.get('/bookinventory/list', function(req, res) {
