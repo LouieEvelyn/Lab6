@@ -36,7 +36,7 @@ app.get('/bookinventory/add', function(req, res) {
   res.send('Insert book details: ' + html + '<br><a href="/bookinventory/list">List of books</a>');
 });
 
-app.post/bookinventory/addbook', function(req, res) {
+app.post('/bookinventory/addbook', function(req, res) {
     console.log(req.body);
     var newBook = {
         title: req.body.title,
