@@ -22,7 +22,7 @@ app.get('/bookinventory/list', function(req, res) {
     }
     html += '</p>';
 
-   res.send('List of books: ' + html + '<br><a href="/books/add">Add a new book</a> ');
+   res.send('List of books: ' + html + '<br><a href="/bookinventory/add">Add a new book</a> ');
 });
 app.get('/bookinventory/add', function(req, res) {
     var html = '<br><form action="/books/addbook" method="post">';
