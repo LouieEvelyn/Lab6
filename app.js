@@ -33,10 +33,10 @@ app.get('/bookinventory/add', function(req, res) {
   html += '<label for="website">Website:</label><br><input type="text" id="website" name="website"><br><br>';
   html += '<input type="submit" value="Submit"><br></form>';
 
-  res.send('Insert book details: ' + html + '<br><a href="/books/list">List of books</a>');
+  res.send('Insert book details: ' + html + '<br><a href="/bookinventory/list">List of books</a>');
 });
 
-app.post(/'bookinventory/addbook', function(req, res) {
+app.post/bookinventory/addbook', function(req, res) {
     console.log(req.body);
     var newBook = {
         title: req.body.title,
@@ -46,7 +46,7 @@ app.post(/'bookinventory/addbook', function(req, res) {
         website: req.body.website
     };
     books.push(newBook);
-  res.send('Book: ' + newBook.title + ' is added!<br> <a href="/books/list">List of books</a>');
+  res.send('Book: ' + newBook.title + ' is added!<br> <a href="/bookinventory/list">List of books</a>');
 });
 
 app.listen(3000);
