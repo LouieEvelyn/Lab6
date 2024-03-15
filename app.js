@@ -25,7 +25,7 @@ app.get('/bookinventory/list', function(req, res) {
    res.send('List of books: ' + html + '<br><a href="/bookinventory/add">Add a new book</a> ');
 });
 app.get('/bookinventory/add', function(req, res) {
-    var html = '<br><form action="/books/addbook" method="post">';
+    var html = '<br><form action="/bookinventory/addbook" method="post">';
   html += '<label for="title">Title:</label><br><input type="text" id="title" name="title"><br>';
   html += '<label for="author">Author:</label><br><input type="text" id="author" name="author"><br>';
   html += '<label for="publisher">Publisher:</label><br><input type="text" id="publisher" name="publisher"><br>';
