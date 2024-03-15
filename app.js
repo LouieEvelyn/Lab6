@@ -10,7 +10,7 @@ app.get('/', function(req, res) {
     res.redirect('/books/list');
 });
 
-app.get('/books/list', function(req, res) {
+app.get('/bookinventory/list', function(req, res) {
     var html = '<ul>';
     for (var i = 0; i < books.length; i++) {
         html += '<li>Title: ' + books[i].title + '</li>';
@@ -23,7 +23,7 @@ app.get('/books/list', function(req, res) {
     res.send('List of books: ' + html + '<br><a href="/books/add">Add a new book</a>');
 });
 
-app.get('/books/add', function(req, res) {
+app.get('/bookinventory/add', function(req, res) {
     var html = '<form action="/books/addbook" method="post">';
     html += '<label for="title">Title:</label><br>';
     html += '<input type="text" id="title" name="title"><br>';
@@ -39,7 +39,7 @@ app.get('/books/add', function(req, res) {
     res.send('Insert book details: ' + html + '<br><a href="/books/list">List of books</a>');
 });
 
-app.post('/books/addbook', function(req, res) {
+app.post('/bookinventory/addbook', function(req, res) {
     console.log(req.body);
     var newBook = {
         title: req.body.title,
