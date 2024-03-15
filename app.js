@@ -10,7 +10,7 @@ app.get('/', function(req, res) {
     res.redirect('http://localhost:3000/books/list');
 });
 
-app.get('http://localhost:3000/bookinventory/list', function(req, res) {
+app.get('bookinventory/list', function(req, res) {
     
    var html = '<p>';
    for (var i = 0; i < books.length; i++) {
@@ -24,7 +24,7 @@ app.get('http://localhost:3000/bookinventory/list', function(req, res) {
 
    res.send('List of books: ' + html + '<br><a href="/books/add">Add a new book</a> ');
 });
-app.get('http://localhost:3000/bookinventory/add', function(req, res) {
+app.get('bookinventory/add', function(req, res) {
     var html = '<br><form action="/books/addbook" method="post">';
   html += '<label for="title">Title:</label><br><input type="text" id="title" name="title"><br>';
   html += '<label for="author">Author:</label><br><input type="text" id="author" name="author"><br>';
@@ -36,7 +36,7 @@ app.get('http://localhost:3000/bookinventory/add', function(req, res) {
   res.send('Insert book details: ' + html + '<br><a href="/books/list">List of books</a>');
 });
 
-app.post('http://localhost:3000/bookinventory/addbook', function(req, res) {
+app.post('bookinventory/addbook', function(req, res) {
     console.log(req.body);
     var newBook = {
         title: req.body.title,
