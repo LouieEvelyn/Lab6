@@ -51,10 +51,16 @@
         <h1>Welcome to the Book Inventory App</h1>
     </header>
     <nav>
-        <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link" href="http://localhost:3000/bookinventory/list">List Books</a></li>
-            <li class="nav-item"><a class="nav-link" href="http://localhost:3000/bookinventory/add">Add a Book</a></li>
-        </ul>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <a class="btn btn-primary btn-lg btn-block" href="http://localhost:3000/bookinventory/list">List Books</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <a class="btn btn-success btn-lg btn-block" href="http://localhost:3000/bookinventory/add">Add a Book</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <div class="container" id="content">
         <!-- Content will be loaded here -->
